@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.4" client="site" method="upgrade">
+   <name>RandomBrand</name>
+	<version>1.0.0</version>
+	<creationDate>4/8/2015</creationDate>
+	<author>Miguel Angel Zapatero</author>
+	<authorEmail>miguel@bladis.com</authorEmail>
+	<copyright>Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.</copyright>
+	<description>A simple module to show a random brands images from Brand Joomla component.</description>
+
+   <files>
+      <filename module="mod_randombrand">mod_randombrand.php</filename>
+      <filename>mod_randombrand.xml</filename>
+      <filename>helper.php</filename>
+      <folder>tmpl</folder>
+   </files>
+   <config>
+      <fields name="params">
+         <fieldset name="basic">
+            <field
+             name="mymenuitem"
+             type="menuitem"
+             default="45"
+             label="Select a menu item"
+             description="Select a menu item" />
+         </fieldset>
+      </fields>
+   </config>
+</extension>
