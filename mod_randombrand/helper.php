@@ -18,6 +18,18 @@ class modRandomBrandHelper
      */
     public static function getBrands($params)
     {
-        return 'Hello!';
+      // Obtain a database connection
+      $db = JFactory::getDbo();
+      // Retrieve the shout
+      $query = $db->getQuery(true)
+                  ->select($db->quoteName('id, brand_name, published, logo, webpage'))
+                  ->from($db->quoteName('#__brand'))
+                  ->where('published = true');
+      // Prepare the query
+      $db->setQuery($query);
+      // Load the row.
+      $result = $db->loadResult();
+      // Return the Hello
+      return $result;
     }
 }
