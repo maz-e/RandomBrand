@@ -17,7 +17,7 @@ $item_menu = $menu->getItem($params->get('mymenuitem'));
 	<div class="row">
 	<?php	foreach ($random_img as $item) { ?>
 		<div class="col s6 m3 l2 <?php if(current($item)>5) {echo 'hide-on-small-only'; } ?>">
-			<a href="<?php echo $item->webpage; ?>">
+			<a href="<?php echo $item->webpage; ?>" target="_blank">
 				<img class="responsive-img hoverable margin-bottom" src="<?php echo $item->logo; ?>" alt="<?php echo $item->brand_name; ?>">
 			</a>
 		</div>
