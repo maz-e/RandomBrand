@@ -1,23 +1,29 @@
 <?php
 // No direct access
 defined('_JEXEC') or die;
+
+//$app = JFactory::getApplication();
+$menu = $app->getMenu();
+$item_menu = $menu->getItem($params->get('mymenuitem'));
 ?>
-<div class="row">
 	<?php if($module->showtitle) : ?>
-      <h4 class="center-align red-text">
-         <?php echo $module->title; ?>¿Que marcas distribuimos?
-      </h4>
-   <?php endif; ?>
+	   <h4 class="center-align red-text">
+	      <?php echo $module->title; ?>
+	   </h4>
+	<?php endif; ?>
 	<p class=" center-align flow-text">
-      <?php echo $params->get('text_intro'); ?>Siempre trabajamos con las mejores marcas del sector garantizando a nuestros clientes materiales de alta calidad a los mejores precios.
-   </p>
-	<?php for ($i=0; $i < 12 ; $i++) : ?>
-		<div class="col s6 m3 l2">
-			<img class="responsive-img" src="http://placehold.it/200x150">
+	   <?php echo $params->get('text_intro'); ?>
+	</p>
+	<div class="row">
+	<?php	foreach ($random_img as $item) { ?>
+		<div class="col s6 m3 l2 <?php if(current($item)>5) {echo 'hide-on-small-only'; } ?>">
+			<a href="<?php echo $item->webpage; ?>">
+				<img class="responsive-img hoverable margin-bottom" src="<?php echo $item->logo; ?>" alt="<?php echo $item->brand_name; ?>">
+			</a>
 		</div>
-	<?php endfor; ?>
-</div>
-<a class="waves-effect waves-teal btn red" href="<?php echo $params->get('mymenuitem'); ?>">
-	<!-- Ver más... -->
-	<?php echo JText::_('TPL_BDMATZ_SEEMORE'); ?>
-</a>
+	<?php } ?>
+	</div>
+	<a class="waves-effect waves-teal btn red" href="<?php echo htmlspecialchars($item_menu->link); ?>">
+		<!-- Ver más... -->
+		<?php echo JText::_('TPL_BDMATZ_SEEMORE'); ?>
+	</a>
