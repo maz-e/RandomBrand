@@ -23,7 +23,7 @@ $item_menu = $menu->getItem($params->get('mymenuitem'));
 		</div>
 	<?php } ?>
 	</div>
-	<a class="waves-effect waves-teal btn red" href="<?php echo htmlspecialchars($item_menu->link); ?>">
+	<a class="waves-effect waves-teal btn red" href="<?php echo htmlspecialchars($item_menu->route); ?>">
 		<!-- Ver más... -->
 		<?php echo JText::_('TPL_BDMATZ_SEEMORE'); ?>
 	</a>
