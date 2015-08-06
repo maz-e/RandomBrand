@@ -18,6 +18,13 @@
       <fields name="params">
          <fieldset name="basic">
             <field
+             name="text_intro"
+             type="textarea"
+             label="Texto de introduccion"
+             rows="10"
+             cols="5"
+            />
+            <field
              name="mymenuitem"
              type="menuitem"
              default="45"
