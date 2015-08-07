@@ -45,7 +45,9 @@ class modRandomBrandHelper
       foreach ($random as $key) {
          $img[] = $images[$key];
       }
-
+      // Randomize the order of the elements in the array
+      shuffle($img);
+      // Return the random list logo images
       return $img;
    }
 }
