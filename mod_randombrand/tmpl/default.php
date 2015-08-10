@@ -24,7 +24,7 @@ $conta = 0;
 	<?php $conta++; ?>
 	<?php } ?>
 	</div>
-	<a class="waves-effect waves-teal btn red" href="index.php/<?php echo htmlspecialchars($item_menu->route); ?>">
+	<a class="waves-effect waves-light btn red" href="index.php/<?php echo htmlspecialchars($item_menu->route); ?>">
 		<!-- Ver más... -->
 		<?php echo JText::_('TPL_BDMATZ_SEEMORE'); ?>
 	</a>
