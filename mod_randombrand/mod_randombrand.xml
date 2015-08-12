@@ -12,6 +12,7 @@
       <filename module="mod_randombrand">mod_randombrand.php</filename>
       <filename>mod_randombrand.xml</filename>
       <filename>helper.php</filename>
+      <filename>index.html</filename>
       <folder>tmpl</folder>
    </files>
    <config>
