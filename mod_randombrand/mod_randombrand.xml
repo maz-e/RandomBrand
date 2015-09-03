@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="module" version="3.4" client="site" method="upgrade">
    <name>RandomBrand</name>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<creationDate>4/8/2015</creationDate>
 	<author>Miguel Angel Zapatero</author>
 	<authorEmail>miguel@bladis.com</authorEmail>
@@ -15,6 +15,11 @@
       <filename>index.html</filename>
       <folder>tmpl</folder>
    </files>
+
+   <languages folder="language">
+		<language tag="es-ES">es-ES/es-ES.mod_randombrand.ini</language>
+   </languages>
+
    <config>
       <fields name="params">
          <fieldset name="basic">

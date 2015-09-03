@@ -26,5 +26,5 @@ $conta = 0;
 	</div>
 	<a class="waves-effect waves-light btn red" href="index.php/<?php echo htmlspecialchars($item_menu->route); ?>">
 		<!-- Ver más... -->
-		<?php echo JText::_('TPL_BDMATZ_SEEMORE'); ?>
+		<?php echo JText::_('MOD_RANDOMBRAND_SEEMORE'); ?>
 	</a>
